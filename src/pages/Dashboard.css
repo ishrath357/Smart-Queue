@@ -1,0 +1,81 @@
+.dashboard {
+  padding: 40px;
+  min-height: 100vh;
+  background: #f1f5f9;
+}
+
+.dashboard h1 {
+  color: #0f172a;
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.cards {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  width: 250px;
+  padding: 25px;
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 4px 10px rgba(37, 99, 235, 0.08);
+
+  transition: all 0.3s ease;
+  border-left: 6px solid #2563eb;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.12),
+    0 6px 15px rgba(37, 99, 235, 0.15);
+}
+
+.card h3 {
+  color: #64748b;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 38px;
+  font-weight: bold;
+  color: #2563eb;
+  margin: 0;
+}
+
+.dashboard button {
+  margin-top: 30px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dashboard button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.dashboard button:active {
+  transform: scale(0.97);
+}

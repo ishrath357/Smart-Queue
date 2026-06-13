@@ -1,0 +1,48 @@
+.analytics-container {
+  width: 650px;
+  margin: 50px auto;
+  padding: 30px;
+
+  background: white;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  text-align: center;
+}
+
+.analytics-container h2 {
+  color: #0f172a;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.chart-box {
+  width: 450px;
+  margin: auto;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.stat-card {
+  background: #f8fafc;
+  padding: 15px 25px;
+  border-radius: 12px;
+  min-width: 120px;
+}
+
+.stat-card h3 {
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2563eb;
+}
