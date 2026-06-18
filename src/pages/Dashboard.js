@@ -12,7 +12,7 @@ function Dashboard() {
 
   const loadDashboard = () => {
     axios
-      .get("http://localhost:5000/dashboard")
+      .get("https://smart-queue-backend-dpow.onrender.com/dashboard")
       .then((response) => {
         setData(response.data);
       })
@@ -22,7 +22,7 @@ function Dashboard() {
   };
 
   const callNext = async () => {
-    await axios.post("http://localhost:5000/next-token");
+    await axios.post("https://smart-queue-backend-dpow.onrender.com/next-token");
     loadDashboard();
   };
 

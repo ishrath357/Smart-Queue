@@ -8,7 +8,7 @@ function AddToken() {
   const [name, setName] = useState("");
 
   const addToken = () => {
-    axios.post("http://localhost:5000/tokens", {
+    axios.post("https://smart-queue-backend-dpow.onrender.com/tokens", {
       name: name,
     });
 

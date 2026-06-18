@@ -13,7 +13,7 @@ function ViewTokens() {
 
   const loadTokens = () => {
     axios
-      .get("http://localhost:5000/tokens")
+      .get("https://smart-queue-backend-dpow.onrender.com/tokens")
       .then((res) => setTokens(res.data))
       .catch((err) => console.log(err));
   };
@@ -24,7 +24,7 @@ function ViewTokens() {
     if (!newName) return;
 
     await axios.put(
-      `http://localhost:5000/tokens/${index}`,
+      `https://smart-queue-backend-dpow.onrender.com/tokens/${index}`,
       {
         name: newName,
       }
@@ -41,7 +41,7 @@ function ViewTokens() {
     if (!confirmDelete) return;
 
     await axios.delete(
-      `http://localhost:5000/tokens/${index}`
+      `https://smart-queue-backend-dpow.onrender.com/tokens/${index}`
     );
 
     loadTokens();
