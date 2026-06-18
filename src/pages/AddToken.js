@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import "./AddToken.css";
 import { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+
 
 function AddToken() {
   const [name, setName] = useState("");
