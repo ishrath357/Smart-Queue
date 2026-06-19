@@ -5,9 +5,20 @@ import axios from "axios";
 
 function Dashboard() {
   const [data, setData] = useState({});
+  const [time, setTime] = useState("");
 
   useEffect(() => {
     loadDashboard();
+
+    const interval = setInterval(() => {
+      const now = new Date();
+
+      setTime(
+        now.toLocaleTimeString()
+      );
+    }, 1000);
+
+    return () => clearInterval(interval);
   }, []);
 
   const loadDashboard = () => {
@@ -22,7 +33,10 @@ function Dashboard() {
   };
 
   const callNext = async () => {
-    await axios.post("https://smart-queue-backend-dpow.onrender.com/next-token");
+    await axios.post(
+      "https://smart-queue-backend-dpow.onrender.com/next-token"
+    );
+
     loadDashboard();
   };
 
@@ -31,40 +45,55 @@ function Dashboard() {
       <Navbar />
 
       <div className="dashboard">
-        <h1>QueueEase Dashboard</h1>
+
+        <div className="hero-section">
+          <h1>🚀 QueueEase Dashboard</h1>
+
+          <p>
+            Smart Queue Management System
+          </p>
+
+          <div className="live-time">
+            ⏰ {time}
+          </div>
+        </div>
 
         <div className="cards">
+
           <div className="card">
-            <h3>Total Tokens</h3>
+            <h3>🎟 Total Tokens</h3>
             <p>{data.totalTokens}</p>
           </div>
 
           <div className="card">
-            <h3>Current Token</h3>
+            <h3>📢 Current Token</h3>
             <p>{data.currentToken}</p>
           </div>
 
           <div className="card">
-            <h3>Waiting</h3>
+            <h3>⏳ Waiting</h3>
             <p>{data.waitingUsers}</p>
           </div>
 
           <div className="card">
-            <h3>Serving</h3>
+            <h3>🟢 Serving</h3>
             <p>{data.servingUsers}</p>
           </div>
 
           <div className="card">
-            <h3>Served</h3>
+            <h3>✅ Served</h3>
             <p>{data.servedUsers}</p>
           </div>
+
         </div>
 
-        <br />
-
-        <button onClick={callNext}>
-          Call Next Token
+        <button
+          className="next-btn"
+          onClick={callNext}
+        >
+          ➜ Call Next Token
         </button>
+
       </div>
     </>
   );

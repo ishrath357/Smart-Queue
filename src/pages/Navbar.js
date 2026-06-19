@@ -1,18 +1,61 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./Navbar.css";
 
 function Navbar() {
-  return (
-    <div className="navbar">
-      <h2>QueueEase</h2>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-      <div className="nav-links">
-        <Link to="/dashboard">Dashboard</Link>
-        <Link to="/add-token">Add Token</Link>
-        <Link to="/view-tokens">View Tokens</Link>
-        <Link to="/analytics">Analytics</Link>
+  return (
+    <nav className="navbar">
+
+      <div className="logo">
+        🚀 QueueEase
       </div>
-    </div>
+
+      <div
+        className={`hamburger ${menuOpen ? "active" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div
+        className={`nav-links ${
+          menuOpen ? "show" : ""
+        }`}
+      >
+        <Link
+          to="/dashboard"
+          onClick={() => setMenuOpen(false)}
+        >
+          Dashboard
+        </Link>
+
+        <Link
+          to="/add-token"
+          onClick={() => setMenuOpen(false)}
+        >
+          Add Token
+        </Link>
+
+        <Link
+          to="/view-tokens"
+          onClick={() => setMenuOpen(false)}
+        >
+          View Tokens
+        </Link>
+
+        <Link
+          to="/analytics"
+          onClick={() => setMenuOpen(false)}
+        >
+          Analytics
+        </Link>
+      </div>
+
+    </nav>
   );
 }
 

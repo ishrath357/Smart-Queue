@@ -1,58 +1,23 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #4867b0; /* dark background */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* Center container */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:
+  radial-gradient(circle at top left,#2563eb,#0f172a 40%),
+  #0f172a;
+  color:white;
+  min-height:100vh;
 }
 
-/* Glass effect login box */
-.login-box {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 35px;
-  width: 320px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-  text-align: center;
-  color: white;
+::-webkit-scrollbar{
+  width:8px;
 }
 
-.login-box h2 {
-  margin-bottom: 20px;
-}
-
-/* Inputs */
-.login-box input {
-  width: 100%;
-  padding: 12px;
-  margin-top: 12px;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-}
-
-/* Button */
-.login-box button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 20px;
-  background: #22c55e;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.login-box button:hover {
-  background: #16a34a;
-  transform: scale(1.05);
+::-webkit-scrollbar-thumb{
+  background:#2563eb;
+  border-radius:10px;
 }
