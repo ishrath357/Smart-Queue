@@ -1,81 +1,90 @@
+body {
+  background: #0f172a;
+}
+
 .dashboard {
-  padding: 40px;
+  padding: 20px;
   min-height: 100vh;
-  background: #f1f5f9;
 }
 
 .dashboard h1 {
-  color: #0f172a;
+  color: white;
+  text-align: center;
+  font-size: 42px;
   margin-bottom: 30px;
-  font-size: 36px;
-  font-weight: bold;
 }
 
 .cards {
   display: flex;
-  gap: 25px;
+  gap: 20px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .card {
-  background: linear-gradient(135deg, #ffffff, #f8fafc);
-  width: 250px;
+  background: linear-gradient(135deg,#1e293b,#0f172a);
+  width: 280px;
   padding: 25px;
   border-radius: 20px;
-
   box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.08),
-    0 4px 10px rgba(37, 99, 235, 0.08);
+    0 0 20px rgba(37,99,235,0.3),
+    0 10px 25px rgba(0,0,0,0.3);
 
-  transition: all 0.3s ease;
-  border-left: 6px solid #2563eb;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.12),
-    0 6px 15px rgba(37, 99, 235, 0.15);
+  transform: translateY(-8px) scale(1.02);
 }
 
 .card h3 {
-  color: #64748b;
-  margin-bottom: 10px;
-  font-size: 18px;
+  color: #cbd5e1;
+  margin-bottom: 15px;
 }
 
 .card p {
-  font-size: 38px;
+  font-size: 48px;
   font-weight: bold;
-  color: #2563eb;
-  margin: 0;
+  color: #60a5fa;
 }
 
 .dashboard button {
-  margin-top: 30px;
-  padding: 14px 28px;
+  display: block;
+  margin: 40px auto;
+  padding: 14px 30px;
   border: none;
-  border-radius: 12px;
+  border-radius: 50px;
 
   background: linear-gradient(
     135deg,
     #2563eb,
-    #1d4ed8
+    #3b82f6
   );
 
   color: white;
   font-size: 16px;
   font-weight: bold;
-
   cursor: pointer;
-  transition: all 0.3s ease;
+
+  box-shadow: 0 0 20px rgba(37,99,235,0.4);
 }
 
 .dashboard button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  transform: scale(1.05);
 }
 
-.dashboard button:active {
-  transform: scale(0.97);
+@media (max-width: 768px) {
+
+  .dashboard h1 {
+    font-size: 34px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card p {
+    font-size: 42px;
+  }
 }
