@@ -5,20 +5,9 @@ import axios from "axios";
 
 function Dashboard() {
   const [data, setData] = useState({});
-  const [time, setTime] = useState("");
 
   useEffect(() => {
     loadDashboard();
-
-    const interval = setInterval(() => {
-      const now = new Date();
-
-      setTime(
-        now.toLocaleTimeString()
-      );
-    }, 1000);
-
-    return () => clearInterval(interval);
   }, []);
 
   const loadDashboard = () => {
@@ -47,15 +36,11 @@ function Dashboard() {
       <div className="dashboard">
 
         <div className="hero-section">
-          <h1>🚀 QueueEase Dashboard</h1>
+          <h1>🚀 SmartQueue</h1>
 
           <p>
             Smart Queue Management System
           </p>
-
-          <div className="live-time">
-            ⏰ {time}
-          </div>
         </div>
 
         <div className="cards">
