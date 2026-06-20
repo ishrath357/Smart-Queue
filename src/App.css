@@ -1,4 +1,4 @@
-*{
+/* *{
   margin:0;
   padding:0;
   box-sizing:border-box;
@@ -200,4 +200,34 @@ body{
   font-size:28px;
 }
 
+} */
+ 
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter','Segoe UI',sans-serif;
+
+  background:
+  linear-gradient(
+  180deg,
+  #0f172a 0%,
+  #111827 100%
+  );
+
+  color:white;
+
+  min-height:100vh;
+}
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#3b82f6;
+  border-radius:10px;
 }
