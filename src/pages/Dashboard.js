@@ -36,7 +36,7 @@ function Dashboard() {
       <div className="dashboard">
 
         <div className="hero-section">
-          <h1>🚀 SmartQueue</h1>
+          <h1>TokenHub</h1>
 
           <p>
             Smart Queue Management System

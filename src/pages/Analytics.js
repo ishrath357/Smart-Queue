@@ -80,7 +80,7 @@ function Analytics() {
 
       <div className="analytics-container">
 
-        <h2>📊 SmartQueue Analytics</h2>
+        <h2>📊Queue Analytics</h2>
 
         <div className="chart-box">
           <Pie data={data} />

@@ -9,7 +9,7 @@ function Navbar() {
     <nav className="navbar">
 
       <div className="logo">
-        🚀 QueueEase
+         TokenHub
       </div>
 
       <div
