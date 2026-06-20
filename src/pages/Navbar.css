@@ -7,55 +7,39 @@
   justify-content:space-between;
   align-items:center;
 
-  padding:18px 30px;
+  padding:18px 24px;
 
-  background:
-  rgba(15,23,42,0.85);
-
-  backdrop-filter:blur(15px);
+  background:#111827;
 
   border-bottom:
-  1px solid rgba(255,255,255,0.08);
-
-  box-shadow:
-  0 8px 30px rgba(0,0,0,.25);
+  1px solid rgba(255,255,255,.08);
 }
 
 .logo{
   color:white;
-  font-size:28px;
-  font-weight:700;
-  letter-spacing:1px;
+  font-size:26px;
+  font-weight:800;
 }
 
 .nav-links{
   display:flex;
-  gap:15px;
+  gap:10px;
 }
 
 .nav-links a{
-  color:white;
+  color:#cbd5e1;
   text-decoration:none;
 
-  padding:10px 18px;
+  padding:10px 16px;
 
-  border-radius:30px;
-
-  font-weight:600;
+  border-radius:10px;
 
   transition:.3s;
 }
 
 .nav-links a:hover{
-  background:
-  linear-gradient(
-  135deg,
-  #2563eb,
-  #7c3aed
-  );
-
-  transform:
-  translateY(-2px);
+  background:#2563eb;
+  color:white;
 }
 
 .hamburger{
@@ -65,76 +49,43 @@
 }
 
 .hamburger span{
-  width:28px;
+  width:25px;
   height:3px;
-
   background:white;
-
   margin:4px 0;
-
-  border-radius:10px;
-
-  transition:.3s;
-}
-
-.hamburger.active span:nth-child(1){
-  transform:
-  rotate(45deg)
-  translate(6px,6px);
-}
-
-.hamburger.active span:nth-child(2){
-  opacity:0;
-}
-
-.hamburger.active span:nth-child(3){
-  transform:
-  rotate(-45deg)
-  translate(6px,-6px);
 }
 
 @media(max-width:768px){
 
-.hamburger{
-  display:flex;
-}
+  .hamburger{
+    display:flex;
+  }
 
-.nav-links{
+  .nav-links{
+    position:absolute;
 
-  position:absolute;
+    top:70px;
+    left:0;
 
-  top:80px;
-  left:0;
+    width:100%;
 
-  width:100%;
+    background:#111827;
 
-  background:
-  rgba(15,23,42,.98);
+    flex-direction:column;
 
-  backdrop-filter:blur(15px);
+    max-height:0;
 
-  flex-direction:column;
+    overflow:hidden;
 
-  text-align:center;
+    transition:.3s;
+  }
 
-  max-height:0;
+  .nav-links.show{
+    max-height:400px;
+    padding:15px 0;
+  }
 
-  overflow:hidden;
-
-  transition:.4s ease;
-}
-
-.nav-links.show{
-  max-height:400px;
-  padding:15px 0;
-}
-
-.nav-links a{
-  padding:15px;
-}
-
-.logo{
-  font-size:24px;
-}
-
+  .nav-links a{
+    text-align:center;
+  }
 }
